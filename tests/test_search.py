@@ -18,7 +18,7 @@ def test_search_word_returns_matching_documents():
 
 def test_search_word_returns_empty_dict_for_missing_word():
     index = {
-        "life": 
+        "life": {
             0: {"count": 2, "positions": [0, 3]}
         }
     }
