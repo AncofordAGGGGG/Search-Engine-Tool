@@ -30,13 +30,27 @@ def load():
 def print_word(word):
     index = load()
     result = search_word(index, word)
-    print(result)
+
+    if not result:
+        print(f"No results found for '{word}'")
+        return
+
+    print(f"Results for '{word}':")
+    for doc_id, info in result.items():
+        print(f"- Document {doc_id}: count={info['count']}, positions={info['positions']}")
 
 
 def find_words(words):
     index = load()
     result = search_multiple_words(index, words)
-    print(result)
+
+    if not result:
+        print(f"No documents contain all words: {words}")
+        return
+
+    print(f"Documents containing {words}:")
+    for doc_id in result:
+        print(f"- Document {doc_id}")
 
 
 def main():
