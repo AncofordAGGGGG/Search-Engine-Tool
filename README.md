@@ -64,7 +64,7 @@ data/
 
 Run tests using:
 ```bash
-pytest
+PYTHONPATH=. python -m pytest
 ```
 
 
