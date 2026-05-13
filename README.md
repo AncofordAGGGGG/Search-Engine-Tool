@@ -35,6 +35,12 @@ python -m src.main build
 python -m src.main print life
 ```
 
+### Load index
+
+```bash
+python -m src.main load
+```
+
 ### Search multiple words
 
 ```bash
