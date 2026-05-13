@@ -72,6 +72,10 @@ def main():
             print("Usage: find <word1> <word2> ...")
             return
         find_words(sys.argv[2:])
+    elif command == "load":
+        index = load()
+        print("Index loaded successfully.")
+        print(f"Total indexed words: {len(index)}")
     else:
         print("Unknown command")
 
