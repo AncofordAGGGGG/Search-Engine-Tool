@@ -5,7 +5,7 @@ def search_word(index: Dict, word: str) -> Dict:
     """
     Return all documents containing the word.
     """
-    word = word.lower()
+    word = word.lower() # Change Case
     return index.get(word, {})
 
 
@@ -13,7 +13,7 @@ def search_multiple_words(index: Dict, words: List[str]) -> List[int]:
     """
     Return document IDs that contain ALL words.
     """
-    result_sets = []
+    result_sets = [] # Store document ID
 
     for word in words:
         word = word.lower()

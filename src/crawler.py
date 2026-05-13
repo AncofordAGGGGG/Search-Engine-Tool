@@ -5,8 +5,9 @@ import requests
 from bs4 import BeautifulSoup
 
 
-BASE_URL = "http://quotes.toscrape.com"
-REQUEST_DELAY = 6
+BASE_URL = "http://quotes.toscrape.com" # Base URL of the target website
+
+REQUEST_DELAY = 6 # Required politeness delay between requests
 
 
 def fetch_page(url: str) -> str:
@@ -16,7 +17,7 @@ def fetch_page(url: str) -> str:
     """
     response = requests.get(url, timeout=10)
     response.raise_for_status()
-    time.sleep(REQUEST_DELAY)
+    time.sleep(REQUEST_DELAY) # Wait 6 seconds to respect coursework politeness rules
     return response.text
 
 
